@@ -7,26 +7,25 @@ import React, {useState} from 'react';
 import LoginForm from './components/LoginForm';
 import BetContainer from './components/BetContainer';
 import BetCounter from './components/BetCounter';
+import TaskList from './components/TaskList';
 
 
-function Welcome({name}){
-  return <h1>Hola {name}</h1>
-}
+// function Welcome({name}){
+//   return <h1>Hola {name}</h1>
+// }
 function App() {
-  const [value,setValue] = useState(0)
-  function increaseCounter() {
-    setValue(value+1)
-  }
+  // const [value,setValue] = useState(0)
+  // function increaseCounter() {
+  //   setValue(value+1)
+  // }
 
   return (
-    <div className='App'>
-    <div className='div-container'>
-    <BetContainer increase={increaseCounter}/>
-    <BetCounter number={value}/>
+    // <div className='App'>
+    // <div className='div-container'>
+    <TaskList/>
+    // </div>
 
-    </div>
-
-    </div>
+    // </div>
   )
 }
 

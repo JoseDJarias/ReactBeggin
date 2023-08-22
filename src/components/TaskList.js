@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Item from './Item';
+import TaskCounter from './TaskCounter';
  
  function TaskList() {
     const [tasks,setTasks] = useState([
@@ -10,7 +11,7 @@ import Item from './Item';
     ])  
     const handlerTaskToggle = (index) =>{
         const updatedTask = tasks.map((task,position) =>
-        i === index ? 
+        position === index ? 
         {
             ...task,
             completed: !task.completed
@@ -27,11 +28,11 @@ import Item from './Item';
                     key ={index}
                     task= {currenTask.task}
                     completed={currenTask.completed}
-                    onToggle={handlerTaskToggle(index)}
+                    onToggle={() =>handlerTaskToggle(index)}
                     />
-
                 ))};
             </div>
+            <TaskCounter count={0}/>
         </div>
       );
  }
