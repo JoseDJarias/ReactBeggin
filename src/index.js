@@ -5,6 +5,34 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const user = {
+  name: 'Daniel',
+  lastname: 'Arias',
+  photo: 'https://picsum.photos/200'
+};
+function printName() {
+  return user.name + ' ' + user.lastname;
+}
+function printNameV2() {
+  if (user) {
+    return user.name + ' ' + user.lastname;
+  } else {
+    return 'Desconocido';
+  };
+};
+function printTernary(user) {
+  return user? user.name + ' ' + user.lastname : 'Desconocido';
+}
+
+const element2 = (
+  <h1>
+    Hello,{printTernary(null)}
+  </h1>
+);
+const imageElement = (
+  <img src={user.photo} />
+)
+
 root.render(
   <React.StrictMode>
     <App />

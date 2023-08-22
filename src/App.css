@@ -1,38 +1,44 @@
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.nav-container{
+  margin: 0;
+  display: flex;
+  width: 100%;
+  background-color: gainsboro;
+}
+.App-nav ul{
+  display: flex;
+  flex-direction: row;
+}
+.App-nav li:hover{
+  background-color:darkgrey
+}
+.App-nav li{
+  list-style-type: none;
+  margin-right: 40px;
+}
+.App-nav a{
+  text-decoration:none;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div-container{
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 14%;
+  width: 20%;
+  height: 40%;
+  background-color:papayawhip
+
+}
+.bet-container,.bet-counter{
+  margin: 1%;
+  padding: 1%;
 }
