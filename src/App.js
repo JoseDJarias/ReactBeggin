@@ -8,24 +8,44 @@ import LoginForm from './components/LoginForm';
 import BetContainer from './components/BetContainer';
 import BetCounter from './components/BetCounter';
 import TaskList from './components/TaskList';
+import PokeInfo from './components/PokeInfo';
+import UserContext from './UserContext';
 
 
 // function Welcome({name}){
 //   return <h1>Hola {name}</h1>
 // }
+// function App() {
+//   // const [value,setValue] = useState(0)
+//   // function increaseCounter() {
+//   //   setValue(value+1)
+//   // }
+
+//   return (
+//     // <div className='App'>
+//     // <div className='div-container'>
+//     <TaskList/>
+//     // </div>
+
+//     // </div>
+//   )
+// }
+
 function App() {
-  // const [value,setValue] = useState(0)
-  // function increaseCounter() {
-  //   setValue(value+1)
-  // }
+  const user= {name:'Patito',email:'patitos@pat.com'}
+  const [showUser,setShowUser] = useState(false);
 
+  const toggleUser = () =>{
+    setShowUser(!showUser)
+  }
   return (
-    // <div className='App'>
-    // <div className='div-container'>
-    <TaskList/>
-    // </div>
-
-    // </div>
+    <div className='App'>
+      <UserContext.Provider value={user}>
+        <h2>Desplegar Info</h2>
+        <button onClick={toggleUser}>Mostrar</button>
+      </UserContext.Provider>
+    </div>
+  
   )
 }
 
